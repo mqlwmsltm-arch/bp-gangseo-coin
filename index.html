@@ -89,6 +89,12 @@ div[data-post-index-navigation="true"] a { display:inline-flex !important; visib
 nav.pager, nav.post-pager, nav[data-site-documents="true"] { display:flex !important; visibility:visible !important; flex-wrap:wrap; gap:12px; padding:16px 0; }
 nav.pager a, nav.post-pager a, nav[data-site-documents="true"] a { display:inline-flex !important; visibility:visible !important; align-items:center; padding:6px 10px; color:inherit; }
 :where(article, .content) :where(img[width][height]) { max-width:100%; height:auto; }
+/* legacy-mobile-box */
+@media (max-width:768px) {
+  body > header, body > main { padding:clamp(16px,4vw,32px); }
+  body > main > .hero { padding:clamp(24px,6vw,48px) 16px; }
+  body > header > nav { position:static; width:auto; box-sizing:border-box; }
+}
 </style>  <meta property="og:type" content="website">
 </head>
 <body><div data-post-index-navigation="true" aria-label="글 목록 안내"><a href="posts.html">글 목록</a></div>
